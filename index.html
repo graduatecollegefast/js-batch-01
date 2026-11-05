@@ -3,56 +3,68 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Batch 01: Winter Batch | JS Body Care</title>
-<meta name="description" content="Handcrafted in small, numbered batches. Join the waitlist for early access to JS Body Care Batch 01 on Friday, Nov 27.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Young+Serif&display=swap" rel="stylesheet">
+<title>The Winter Drop | JS Body Care</title>
+<meta name="description" content="Handmade winter body care, only a few of each. Get early access to the JS Body Care Winter Drop on Friday, Nov 27.">
+<meta property="og:title" content="The Winter Drop | JS Body Care">
+<meta property="og:description" content="Handmade winter body care, only a few of each. Get in a day early.">
+<link rel="preload" href="fonts/gloock.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-:root{--pine:#16302A;--pine-soft:#3F5A52;--frost:#E4ECE6;--paper:#F5F8F5;--honey:#E2A63B;--salt:#E9BFB0;--line:#B9C9BF}
+@font-face{font-family:Gloock;src:url(fonts/gloock.woff2) format("woff2");font-display:swap}
+@font-face{font-family:"Instrument Sans";src:url(fonts/instrument-sans.woff2) format("woff2");font-weight:400 700;font-display:swap}
+:root{--black:#000;--white:#fff;--grey:#595959;--line:#D6D6D6;--green:#3CC47C}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--frost);color:var(--pine);font:400 17px/1.55 "Instrument Sans",system-ui,sans-serif}
-h1,h2,h3{font-family:"Young Serif",Georgia,serif;font-weight:400;margin:0}
+body{margin:0;background:var(--white);color:var(--black);font:400 17px/1.55 "Instrument Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:Gloock,Georgia,serif;font-weight:400;margin:0}
 a{color:inherit}
 .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-.brand{padding:20px 0;font-family:"Young Serif",Georgia,serif;font-size:20px}
-.hero{background:var(--pine);color:var(--paper)}
-.hero-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:end;padding:40px 0 64px}
-h1{font-size:clamp(76px,15vw,168px);line-height:.92;letter-spacing:-.02em}
-.sub{font-family:"Young Serif",Georgia,serif;font-size:26px;margin:14px 0 18px;color:var(--honey)}
-.lede{max-width:44ch;margin:0}
-.join{background:var(--paper);color:var(--pine);padding:24px;border-radius:4px}
-.join h2{font-size:26px;line-height:1.2;margin-bottom:8px}
-.join p{margin:0 0 16px;font-size:16px}
+.hero{background:var(--black);color:var(--white)}
+.brand{padding:18px 0 0;font-family:Gloock,Georgia,serif;font-size:19px}
+.hero-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:56px;align-items:center;padding:32px 0 56px}
+h1{font-size:clamp(46px,7.4vw,84px);line-height:1.02}
+.lede{margin:16px 0 0;font-size:19px;max-width:38ch}
 label{display:block;font-weight:600;font-size:15px;margin-bottom:6px}
-input[type=email]{width:100%;font:inherit;padding:13px 14px;border:1.5px solid var(--pine);border-radius:3px;background:#fff;color:var(--pine)}
-button,.btn{display:inline-block;width:100%;margin-top:10px;font:600 17px/1.2 "Instrument Sans",sans-serif;padding:15px;border:0;border-radius:3px;background:var(--honey);color:var(--pine);cursor:pointer;text-align:center;text-decoration:none}
-button:hover,.btn:hover{background:#EDB854}
-:focus-visible{outline:3px solid var(--honey);outline-offset:2px}
-.join :focus-visible{outline-color:var(--pine)}
-.fine{font-size:13.5px!important;margin:10px 0 0!important;color:var(--pine-soft)}
-.msg{font-weight:600;margin:12px 0 0!important}
+input[type=email]{width:100%;height:54px;font:inherit;font-size:18px;padding:0 14px;border:1.5px solid var(--white);border-radius:2px;background:var(--black);color:var(--white)}
+input[type=email]::placeholder{color:#A6A6A6}
+button,.btn{display:block;width:100%;min-height:54px;margin-top:10px;font:600 18px/1.2 "Instrument Sans",sans-serif;padding:16px;border:0;border-radius:2px;background:var(--green);color:var(--black);cursor:pointer;text-align:center;text-decoration:none}
+button:hover,.btn:hover{background:#5AD693}
+button:disabled{opacity:.6}
+:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+.join-h{font-family:Gloock,Georgia,serif;font-size:25px;line-height:1.2;margin:0 0 14px}
+.fine{font-size:13.5px;margin:10px 0 0;color:#BDBDBD}
+.msg{font-weight:600;margin:12px 0 0}
+.done h2{font-size:30px;line-height:1.15;margin-bottom:8px}
+.done p{margin:0 0 6px}
+.proof{margin:14px 0 0;font-size:15px}
 .hide{position:absolute;left:-9999px}
-.dates{display:grid;grid-template-columns:1fr 1fr;gap:32px;padding:36px 0;border-bottom:1.5px solid var(--line)}
-.dates strong{display:block;font-family:"Young Serif",Georgia,serif;font-weight:400;font-size:clamp(26px,4vw,36px);line-height:1.15}
-.dates span{color:var(--pine-soft)}
-section{padding:48px 0}
-h2.sec{font-size:clamp(30px,5vw,42px);line-height:1.1;margin-bottom:8px}
-.intro{margin:0 0 28px;max-width:56ch}
-.row{display:grid;grid-template-columns:1fr auto;gap:6px 24px;padding:22px 0;border-top:1.5px solid var(--line)}
+[hidden]{display:none!important}
+.dates{display:grid;grid-template-columns:1fr 1fr;gap:28px;padding:32px 0;border-bottom:1.5px solid var(--black)}
+.dates strong{display:block;font-family:Gloock,Georgia,serif;font-weight:400;font-size:clamp(26px,4vw,36px);line-height:1.15}
+.dates span{color:var(--grey)}
+.dates .early strong::after{content:"";display:inline-block;width:.32em;height:.32em;margin-left:.3em;background:var(--green);border-radius:50%;vertical-align:.12em}
+section{padding:44px 0 28px}
+h2.sec{font-size:clamp(32px,5vw,44px);line-height:1.1;margin-bottom:8px}
+.intro{margin:0 0 26px;max-width:54ch}
+.row{display:grid;grid-template-columns:1fr auto;gap:6px 24px;padding:22px 0;border-top:1px solid var(--line)}
 .row h3{font-size:24px;line-height:1.2}
-.price{font-family:"Young Serif",Georgia,serif;font-size:24px}
+.price{font-weight:600;font-size:22px}
 .row p{margin:0;max-width:60ch;grid-column:1/-1}
-.count{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;margin-top:8px;font-weight:500;font-size:15px}
-.tally{--n:12;height:18px;width:calc(var(--n)*9px);max-width:100%;background:repeating-linear-gradient(90deg,var(--pine) 0 3px,transparent 3px 9px)}
-.end{background:var(--salt);padding:44px 0;text-align:left}
-.end h2{font-size:clamp(30px,5vw,42px);line-height:1.1;margin-bottom:6px}
-.end p{margin:0 0 16px;max-width:52ch}
-.end .btn{width:auto;padding:15px 28px;background:var(--pine);color:var(--paper);margin:0}
-footer.wrap{padding-top:28px;padding-bottom:36px;font-size:14px;color:var(--pine-soft)}
+.count{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;margin-top:8px;font-weight:600;font-size:15px}
+.tally{height:18px;width:calc(var(--n)*9px);max-width:100%;background:repeating-linear-gradient(90deg,var(--black) 0 3px,transparent 3px 9px)}
+.story{background:var(--black);color:var(--white);padding:52px 0}
+.story h2{font-size:clamp(32px,5vw,48px);line-height:1.1;margin-bottom:12px;max-width:18ch}
+.story p{margin:0 0 20px;max-width:52ch}
+.story .btn{width:auto;display:inline-block;padding:16px 30px}
+footer.wrap{padding-top:26px;padding-bottom:30px;font-size:14px;color:var(--grey)}
 footer p{margin:0 0 8px;max-width:72ch}
-@media(max-width:760px){.hero-grid{grid-template-columns:1fr;gap:28px;padding:20px 0 32px}}
+.sticky{position:fixed;left:0;right:0;bottom:0;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:var(--black);display:none;z-index:5}
+.sticky .btn{margin:0}
+@media(max-width:760px){
+ .hero-grid{grid-template-columns:1fr;gap:22px;padding:14px 0 30px}
+ .lede{font-size:18px}
+ .sticky.show{display:block}
+ body.has-sticky{padding-bottom:78px}
+}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
@@ -62,68 +74,74 @@ footer p{margin:0 0 8px;max-width:72ch}
     <div class="brand">JS Body Care</div>
     <div class="hero-grid">
       <div>
-        <h1>Batch 01</h1>
-        <p class="sub">The Winter Batch</p>
-        <p class="lede">Everything is handcrafted in small, numbered batches. There are only a few of each, and once a batch is gone, it doesn't come back.</p>
+        <h1>Soft skin all winter. Only a few of each.</h1>
+        <p class="lede">The Winter Drop opens Nov 28. Handmade body butter, salt scrub, lip balm and gift boxes, and the list gets in a day early.</p>
       </div>
-      <div class="join" id="join">
-        <h2>Join the waitlist</h2>
-        <p>Get early access on Friday, Nov 27, a full day before the public drop.</p>
+      <div id="join">
         <form name="batch-01-waitlist" id="waitlist" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field">
+          <p class="join-h">Get first pick on Friday, Nov 27</p>
           <input type="hidden" name="form-name" value="batch-01-waitlist">
           <p class="hide"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
           <label for="email">Email address</label>
-          <input id="email" name="email" type="email" required autocomplete="email" inputmode="email" placeholder="you@email.com">
-          <button type="submit">Join the waitlist</button>
-          <p class="msg" id="msg" role="status" hidden></p>
-          <p class="fine">By joining, you agree to get emails from JS Body Care. Unsubscribe anytime.</p>
+          <input id="email" name="email" type="email" required autocomplete="email" autocapitalize="none" autocorrect="off" spellcheck="false" inputmode="email" placeholder="you@email.com">
+          <button type="submit">Get early access</button>
+          <p class="msg" id="msg" role="alert" hidden></p>
+          <p class="fine">We'll email you that morning. By joining, you agree to get emails from JS Body Care. Unsubscribe anytime.</p>
+          <p class="proof">Handmade since 2020. 12K+ on TikTok at @jansoaps.</p>
         </form>
+        <div class="done" id="done" hidden>
+          <h2>You're on the list</h2>
+          <p>Watch your inbox the morning of Friday, Nov 27.</p>
+          <button type="button" id="share">Send this to a friend</button>
+          <p class="msg" id="shared" role="status" hidden></p>
+        </div>
       </div>
     </div>
   </div>
 </header>
 <main class="wrap">
   <div class="dates">
-    <div><strong>Fri, Nov 27</strong><span>Waitlist early access</span></div>
-    <div><strong>Sat, Nov 28</strong><span>Public drop on Small Business Saturday</span></div>
+    <div class="early"><strong>Fri, Nov 27</strong><span>Early access for the list</span></div>
+    <div><strong>Sat, Nov 28</strong><span>Open to everyone on Small Business Saturday</span></div>
   </div>
   <section>
-    <h2 class="sec">What's in Batch 01</h2>
-    <p class="intro">Every piece is numbered by hand. Each mark below is one that exists.</p>
+    <h2 class="sec">What's in the drop</h2>
+    <p class="intro">Everything is made by hand, then numbered. Each mark below is one that exists. When they're gone, they're gone until the next drop.</p>
     <article class="row"><h3>Herbal Whipped Body Butter</h3><span class="price">$15</span>
-      <p>Raw shea butter whipped light and airy, blended with sunflower oil slow-infused with calendula and chamomile. 4 oz jar.</p>
-      <div class="count"><span class="tally" style="--n:12" aria-hidden="true"></span>12 jars</div></article>
+      <p>Raw shea butter whipped light and airy, with sunflower oil slow-infused with calendula and chamomile. It melts in and keeps you soft long after you get dressed. 4 oz jar.</p>
+      <div class="count"><span class="tally" style="--n:12" aria-hidden="true"></span>Only 12 jars</div></article>
     <article class="row"><h3>Pink Himalayan Salt Scrub</h3><span class="price">$16</span>
-      <p>Fine pink Himalayan salt polishes elbows, knees and heels while sunflower oil and vitamin E leave a silky finish. 8 oz jar.</p>
-      <div class="count"><span class="tally" style="--n:6" aria-hidden="true"></span>6 jars</div></article>
+      <p>Buffs away that dull, rough winter layer. Fine pink salt polishes elbows, knees and heels, so you step out of the shower already moisturized. 8 oz jar.</p>
+      <div class="count"><span class="tally" style="--n:6" aria-hidden="true"></span>Only 6 jars</div></article>
     <article class="row"><h3>Herbal Lip Balm</h3><span class="price">$6</span>
-      <p>Beeswax and shea butter with castor oil and sunflower oil infused with calendula and chamomile. Unscented, never waxy or sticky.</p>
-      <div class="count"><span class="tally" style="--n:24" aria-hidden="true"></span>24 tubes</div></article>
+      <p>Beeswax, shea butter and calendula for lips that take the cold and dry heat first. Unscented, never waxy or sticky.</p>
+      <div class="count"><span class="tally" style="--n:24" aria-hidden="true"></span>Only 24 tubes</div></article>
     <article class="row"><h3>FlareShield Travel Tin</h3><span class="price">$14</span>
       <p>A rich, fragrance-free balm for the spots that stay dry, rub and react. 2 oz tin.</p>
-      <div class="count"><span class="tally" style="--n:12" aria-hidden="true"></span>12 tins</div></article>
+      <div class="count"><span class="tally" style="--n:12" aria-hidden="true"></span>Only 12 tins</div></article>
     <article class="row"><h3>Pure Essentials Soap Bar</h3><span class="price">$7.99</span>
       <p>Our simplest bar. No fragrance, no colorants, no extras. Just a creamy, gentle lather.</p>
-      <div class="count"><span class="tally" style="--n:9" aria-hidden="true"></span>9 bars</div></article>
+      <div class="count"><span class="tally" style="--n:9" aria-hidden="true"></span>Only 9 bars</div></article>
     <article class="row"><h3>Winter Barrier Ritual</h3><span class="price">$44</span>
       <p>Your whole winter skin routine in one box: FlareShield, Nourishing Body Oil and a Glow Up Soap Bar.</p>
-      <div class="count"><span class="tally" style="--n:5" aria-hidden="true"></span>5 boxes</div></article>
+      <div class="count"><span class="tally" style="--n:5" aria-hidden="true"></span>Only 5 boxes</div></article>
     <article class="row"><h3>Cold Season Comfort</h3><span class="price">$34</span>
-      <p>A cozy cold-season ritual in one box: LungEase Winter Edition Tea, WinterWell Tincture and Serene Milk Soak Bath Tea.</p>
-      <div class="count"><span class="tally" style="--n:5" aria-hidden="true"></span>5 boxes</div></article>
+      <p>A warm cup, your daily drops and a long soak to end the night: LungEase Winter Edition Tea, WinterWell Tincture and Serene Milk Soak Bath Tea.</p>
+      <div class="count"><span class="tally" style="--n:5" aria-hidden="true"></span>Only 5 boxes</div></article>
   </section>
 </main>
-<div class="end"><div class="wrap">
-  <h2>Get first pick</h2>
-  <p>Waitlist members get in on Friday, Nov 27.</p>
-  <a class="btn" href="#join">Join the waitlist</a>
+<div class="story"><div class="wrap">
+  <h2>It started with my aunt's herbs</h2>
+  <p>Her herbal healing is why this brand exists. I'm carrying that forward, one small batch at a time. Simple. Natural. Built to help you feel better.</p>
+  <a class="btn" href="#join">Get early access</a>
 </div></div>
 <footer class="wrap">
-  <p>Come watch us make it all on TikTok at <a href="https://www.tiktok.com/@jansoaps">@jansoaps</a>.</p>
+  <p>Watch it all get made on TikTok at <a href="https://www.tiktok.com/@jansoaps">@jansoaps</a>.</p>
   <p>These statements have not been evaluated by the Food and Drug Administration. These products are not intended to diagnose, treat, cure, or prevent any disease.</p>
 </footer>
+<div class="sticky" id="sticky"><a class="btn" href="#join">Get early access</a></div>
 <script>
-var f=document.getElementById('waitlist'),m=document.getElementById('msg');
+var f=document.getElementById('waitlist'),m=document.getElementById('msg'),done=document.getElementById('done'),st=document.getElementById('sticky');
 f.addEventListener('submit',function(e){
   e.preventDefault();
   var b=f.querySelector('button');b.disabled=true;m.hidden=true;
@@ -131,13 +149,22 @@ f.addEventListener('submit',function(e){
   fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()})
   .then(function(r){
     if(!r.ok)throw 0;
-    var s=new URLSearchParams();s.set('form_type','customer');s.set('utf8','✓');s.set('contact[email]',email);s.set('contact[tags]','waitlist,batch-01');
+    var s=new URLSearchParams();s.set('form_type','customer');s.set('utf8','\u2713');s.set('contact[email]',email);s.set('contact[tags]','waitlist,batch-01');
     fetch('https://jsbodycare.myshopify.com/contact',{method:'POST',mode:'no-cors',body:s}).catch(function(){});
-    f.reset();m.textContent="You're on the list for Batch 01. Watch your inbox the morning of Nov 27.";m.hidden=false;
+    f.hidden=true;done.hidden=false;st.classList.remove('show');document.body.classList.remove('has-sticky');st.remove();
   })
   .catch(function(){m.textContent="That didn't go through. Check your connection and try again.";m.hidden=false;})
   .finally(function(){b.disabled=false;});
 });
+document.getElementById('share').addEventListener('click',function(){
+  var t='JS Body Care has a Winter Drop coming, and there are only a few of each. Get on the list:',u=location.origin,o=document.getElementById('shared');
+  if(navigator.share){navigator.share({title:'The Winter Drop',text:t,url:u}).catch(function(){});}
+  else if(navigator.clipboard){navigator.clipboard.writeText(t+' '+u).then(function(){o.textContent='Link copied.';o.hidden=false;});}
+});
+if('IntersectionObserver' in window){
+  var n=new IntersectionObserver(function(es){var v=es[0].isIntersecting;st.classList.toggle('show',!v);document.body.classList.toggle('has-sticky',!v);});
+  n.observe(document.getElementById('join'));
+}
 </script>
 </body>
 </html>
