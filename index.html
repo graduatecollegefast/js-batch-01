@@ -14,11 +14,12 @@
 @font-face{font-family:"Instrument Sans";src:url(fonts/instrument-sans.woff2) format("woff2");font-weight:400 700;font-display:swap}
 :root{--black:#000;--white:#fff;--grey:#6B6B6B;--line:#E2E2E2;--green:#3CC47C}
 *{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--white);color:var(--black);font:400 17px/1.65 "Instrument Sans",system-ui,sans-serif}
 h1,h2,h3{font-family:Playfair,Georgia,serif;font-weight:400;margin:0}
 a{color:inherit}
-img{display:block;width:100%;height:100%;object-fit:cover}
+img{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 [hidden]{display:none!important}
 .hide{position:absolute;left:-9999px}
 :focus-visible{outline:2px solid var(--green);outline-offset:3px}
@@ -28,7 +29,7 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 .hero-main{padding:48px 0}
 h1{font-size:clamp(50px,6.2vw,92px);line-height:1.04;max-width:9ch}
 .lede{margin:24px 0 32px;font-size:18px;max-width:34ch;color:#D9D9D9}
-.hero-img{min-height:100%;overflow:hidden}
+.hero-img{position:relative;min-height:100%;overflow:hidden}
 .form-row{display:flex;max-width:440px;border-bottom:1px solid var(--white)}
 label.sr{position:absolute;left:-9999px}
 input[type=email]{flex:1;min-width:0;height:56px;font:inherit;font-size:18px;padding:0;border:0;border-radius:0;background:transparent;color:var(--white)}
@@ -46,7 +47,7 @@ button:disabled{opacity:.6}
 .line{padding:clamp(96px,14vw,180px) 24px;text-align:center}
 .line p{font-family:Playfair,Georgia,serif;font-size:clamp(30px,4.4vw,54px);line-height:1.22;max-width:21ch;margin:0 auto}
 .piece{display:grid;grid-template-columns:1fr 1fr;align-items:center}
-.piece .pic{aspect-ratio:1/1;overflow:hidden}
+.piece .pic{position:relative;aspect-ratio:1/1;overflow:hidden}
 .piece .txt{padding:48px clamp(24px,7vw,110px)}
 .piece.flip .pic{order:2}
 .txt p.num{font-family:Playfair,Georgia,serif;font-size:clamp(46px,6vw,76px);line-height:1.05;margin:0;color:var(--black);max-width:none}
@@ -75,21 +76,47 @@ footer{padding:26px 24px 34px;font-size:13px;color:var(--grey);text-align:center
 footer p{margin:0 auto 6px;max-width:72ch}
 .sticky{position:fixed;left:0;right:0;bottom:0;padding:14px 16px calc(14px + env(safe-area-inset-bottom));background:var(--black);text-align:center;display:none;z-index:5}
 .sticky a{color:var(--green);font-weight:600;text-decoration:none}
-@media(max-width:820px){
- .hero{display:flex;flex-direction:column-reverse;min-height:0}
- .hero-img{aspect-ratio:1/1;min-height:0}
- .hero-img img{object-position:50% 62%}
- .hero-copy{padding:24px 20px 34px;display:block}
- .brand{position:absolute;top:16px;left:20px;color:var(--black)}
- .hero-main{padding:0}
- h1{font-size:50px}
- .lede{margin:14px 0 18px;font-size:17px}
- .piece{grid-template-columns:1fr}
- .piece.flip .pic{order:0}
- .piece .pic{aspect-ratio:1/1}
+.hero-img.mob{display:none}
+@media(max-width:900px){
+ .hero-img.desk{display:none}
+ .hero-img.mob{display:block}
+ body{font-size:18px}
+ .hero{display:block;min-height:0}
+ .hero-copy{display:block;padding:0 20px 30px}
+ .brand{padding:14px 0;text-align:center;font-size:20px}
+ .hero-img{margin:0 -20px;aspect-ratio:3/2;min-height:0}
+ .hero-img img{object-position:50% 58%}
+ .hero-main{padding:22px 0 0}
+ h1{font-size:clamp(40px,12vw,64px);max-width:none}
+ .lede{margin:12px 0 18px;font-size:18px;max-width:none}
+ .form-row{display:block;max-width:none;border:0}
+ input[type=email]{display:block;width:100%;height:56px;padding:0 14px;border:1px solid var(--white);border-radius:2px;font-size:18px}
+ input[type=email]:focus{border-color:var(--green)}
+ button[type=submit]{display:block;width:100%;height:56px;margin-top:10px;padding:0;background:var(--green);color:var(--black);border-radius:2px;font-size:18px}
+ .done button{min-height:48px}
+ .fine{font-size:14px;max-width:none}
+ .quiet{margin-top:14px;font-size:15px}
+ .line{padding:76px 22px}
+ .line p{font-size:clamp(30px,8.4vw,44px);max-width:none}
+ .piece{display:block}
+ .piece .pic{width:100%}
+ .piece .txt{padding:34px 22px 56px}
+ .txt p{max-width:none}
+ .price{font-size:17px}
  .two,.also{grid-template-columns:1fr;gap:34px}
+ .two p{max-width:none}
+ .two span,.also span{font-size:16px}
+ .also p{font-size:17px}
+ footer{font-size:14px}
+ footer a{display:inline-block;padding:10px}
+ .sticky{padding:10px 16px calc(10px + env(safe-area-inset-bottom))}
+ .sticky a{display:block;padding:15px;background:var(--green);color:var(--black);border-radius:2px;font-size:18px}
  .sticky.show{display:block}
- body.has-sticky{padding-bottom:52px}
+ body.has-sticky{padding-bottom:80px}
+}
+@media(max-width:900px) and (orientation:landscape) and (max-height:500px){
+ .hero-img{aspect-ratio:3/1}
+ .piece .pic{aspect-ratio:16/10}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
@@ -98,6 +125,7 @@ footer p{margin:0 auto 6px;max-width:72ch}
 <header class="hero">
   <div class="hero-copy">
     <div class="brand">JS Body Care</div>
+    <div class="hero-img mob"><img src="img/butter.webp" width="878" height="1144" alt="Jar of JS Body Care Herbal Whipped Body Butter on white marble, with chamomile beside it"></div>
     <div class="hero-main" id="join">
       <h1>Twelve jars. Numbered by hand.</h1>
       <p class="lede">The Winter Drop opens Thanksgiving Day. The list gets in a day early.</p>
@@ -121,7 +149,7 @@ footer p{margin:0 auto 6px;max-width:72ch}
     </div>
     <div class="quiet">Handmade since 2020</div>
   </div>
-  <div class="hero-img"><img src="img/butter.webp" width="878" height="1144" alt="Jar of JS Body Care Herbal Whipped Body Butter on white marble, with chamomile beside it"></div>
+  <div class="hero-img desk"><img src="img/butter.webp" width="878" height="1144" alt="Jar of JS Body Care Herbal Whipped Body Butter on white marble, with chamomile beside it"></div>
 </header>
 <main>
   <div class="line"><p>If your skin drinks lotion and still feels tight by lunch, it's asking for something richer.</p></div>
